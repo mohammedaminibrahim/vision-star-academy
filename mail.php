@@ -5,7 +5,7 @@
     if(isset($_POST['send'])){
         $firstname = $_POST['firstname'];
         $lastname = $_POST['lastname'];
-        $email = $_POST['email'];
+        // $email = $_POST['email'];
         $tel = $_POST['tel'];
         $message = $_POST['message'];
 
@@ -17,6 +17,9 @@
             //set Subject
             $subject = "FROM VISION ACADEMY WEBSITE - {$firstname}" . " " . "{$lastname}";
             $message = wordwrap($message,70);
+
+            //put your email the sting. Replace sample@gmail.com to your email
+            $email = "sample@gmail.com";
 
             // send email
             mail($email,$subject,$message);
